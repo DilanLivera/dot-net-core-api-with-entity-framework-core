@@ -27,6 +27,13 @@ steps:
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
+  inputs:
+    command: 'custom'
+    projects: '*/*.sln'
+    custom: 'list'
+    arguments: 'package --vulnerable'
+
+- task: DotNetCoreCLI@2
   displayName: Run Tests
   inputs:
     command: 'test'
