@@ -27,6 +27,7 @@ steps:
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
+  displayName: List Vulnerabilities
   inputs:
     command: 'custom'
     projects: '*/*.sln'
